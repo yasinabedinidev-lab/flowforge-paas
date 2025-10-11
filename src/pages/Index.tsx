@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Play, Eye, ArrowLeft, Code, Key, Sparkles } from "lucide-react";
+import { Play, Eye, ArrowLeft, Code, Key, Sparkles, Workflow } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const topWorkflows = [
@@ -81,31 +81,89 @@ const Index = () => {
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
               ورک‌فلوهای آماده و APIهای اختصاصی برای اتوماسیون کسب‌وکار شما
             </p>
+          </div>
+        </div>
+      </section>
 
-            {/* Quick Links Box */}
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 max-w-md mx-auto mt-8">
-              <h3 className="text-white font-semibold mb-4">دسترسی سریع</h3>
-              <div className="flex gap-3">
-                <Link to="/workflows" className="flex-1">
-                  <Button 
-                    size="lg"
-                    className="w-full bg-gradient-to-r from-primary to-accent hover:shadow-glow-orange transition-smooth"
-                  >
-                    ورک‌فلوها
-                    <ArrowLeft className="mr-2 h-4 w-4" />
-                  </Button>
-                </Link>
-                <Link to="/apis" className="flex-1">
-                  <Button 
-                    size="lg"
-                    variant="outline"
-                    className="w-full border-2 border-white/30 bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm"
-                  >
-                    APIها
-                    <ArrowLeft className="mr-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
+      {/* Quick Access Box */}
+      <section className="py-16 bg-background">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6">
+              <Link to="/workflows" className="group">
+                <Card className="h-full border-border/50 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-orange bg-gradient-card">
+                  <CardContent className="p-8 text-center">
+                    <div className="inline-flex p-4 rounded-2xl bg-gradient-to-br from-primary to-primary-glow mb-4 shadow-glow-orange group-hover:scale-110 transition-transform">
+                      <Workflow className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-smooth">
+                      ورک‌فلوهای آماده
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      صدها ورک‌فلوی آماده و تست‌شده
+                    </p>
+                    <Button 
+                      variant="ghost" 
+                      size="sm"
+                      className="gap-2 text-primary hover:bg-primary/10"
+                    >
+                      مشاهده همه
+                      <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link to="/apis" className="group">
+                <Card className="h-full border-border/50 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-purple bg-gradient-card">
+                  <CardContent className="p-8 text-center">
+                    <div className="inline-flex p-4 rounded-2xl bg-gradient-to-br from-accent to-accent-glow mb-4 shadow-glow-purple group-hover:scale-110 transition-transform">
+                      <Code className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-smooth">
+                      APIهای اختصاصی
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      دسترسی به سرویس‌های مختلف
+                    </p>
+                    <Button 
+                      variant="ghost" 
+                      size="sm"
+                      className="gap-2 text-accent hover:bg-accent/10"
+                    >
+                      مشاهده همه
+                      <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link to="/custom-order" className="group">
+                <Card className="h-full border-2 border-primary/50 hover:border-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-orange bg-gradient-to-br from-primary/5 to-accent/5">
+                  <CardContent className="p-8 text-center relative overflow-hidden">
+                    <div className="absolute top-0 right-0 px-3 py-1 bg-gradient-to-r from-primary to-accent text-white text-xs font-medium rounded-bl-lg">
+                      جدید
+                    </div>
+                    <div className="inline-flex p-4 rounded-2xl bg-gradient-to-br from-primary via-accent to-primary mb-4 shadow-glow-orange group-hover:scale-110 transition-transform animate-pulse-glow">
+                      <Sparkles className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-smooth">
+                      سفارش اختصاصی
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      ورک‌فلوی مخصوص خودتان را سفارش دهید
+                    </p>
+                    <Button 
+                      variant="default"
+                      size="sm"
+                      className="gap-2 bg-gradient-to-r from-primary to-accent hover:shadow-glow-orange"
+                    >
+                      ثبت سفارش
+                      <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
             </div>
           </div>
         </div>

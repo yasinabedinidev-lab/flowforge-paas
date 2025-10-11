@@ -12,8 +12,8 @@ const Navbar = () => {
     { to: "/", label: "خانه" },
     { to: "/workflows", label: "ورک‌فلوها" },
     { to: "/apis", label: "APIها" },
+    { to: "/custom-order", label: "سفارش اختصاصی" },
     { to: "/flowhub", label: "ویژگی‌ها" },
-    { to: "/pricing", label: "تعرفه‌ها" },
   ];
 
   const canGoBack = window.history.length > 1 && location.pathname !== "/";
