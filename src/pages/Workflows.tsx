@@ -1,6 +1,5 @@
 import { useState } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -96,9 +95,8 @@ const Workflows = () => {
   });
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1 py-12 bg-background">
+    <div className="min-h-screen">
+      <main className="py-12 bg-background">
         <div className="container">
           {/* Page Header */}
           <div className="mb-12 animate-fade-in">
@@ -143,7 +141,8 @@ const Workflows = () => {
           {/* Workflows Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredWorkflows.map((workflow, index) => (
-              <Card
+              <Link key={workflow.id} to={`/workflows/${workflow.id}`}>
+                <Card
                 key={workflow.id}
                 className="group hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-border/50 hover:border-primary/50 bg-card animate-scale-in"
                 style={{ animationDelay: `${index * 0.05}s` }}
@@ -194,6 +193,7 @@ const Workflows = () => {
                   </div>
                 </CardContent>
               </Card>
+              </Link>
             ))}
           </div>
 
@@ -206,7 +206,6 @@ const Workflows = () => {
           )}
         </div>
       </main>
-      <Footer />
     </div>
   );
 };

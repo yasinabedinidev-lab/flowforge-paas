@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles, Zap, Crown } from "lucide-react";
@@ -67,9 +65,8 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1 py-16 bg-background">
+    <div className="min-h-screen">
+      <main className="py-16 bg-background">
         <div className="container">
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
@@ -198,7 +195,6 @@ const Pricing = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };

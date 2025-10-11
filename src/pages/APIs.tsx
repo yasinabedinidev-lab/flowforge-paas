@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -70,9 +68,8 @@ const apis = [
 
 const APIs = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1 py-12 gradient-hero">
+    <div className="min-h-screen">
+      <main className="py-12 gradient-hero">
         <div className="container">
           {/* Page Header */}
           <div className="mb-12 text-center animate-fade-in">
@@ -221,7 +218,6 @@ const APIs = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
