@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles, Zap, Crown } from "lucide-react";
@@ -66,6 +67,7 @@ const plans = [
 const Pricing = () => {
   return (
     <div className="min-h-screen">
+      <Navbar />
       <main className="py-16 bg-background">
         <div className="container">
           {/* Header */}

@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Workflow, Code, Server, Zap, Shield, TrendingUp } from "lucide-react";
 
@@ -43,6 +44,7 @@ const features = [
 const FlowHub = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Navbar />
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-16 animate-fade-in">

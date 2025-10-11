@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -69,6 +70,7 @@ const apis = [
 const APIs = () => {
   return (
     <div className="min-h-screen">
+      <Navbar />
       <main className="py-12 gradient-hero">
         <div className="container">
           {/* Page Header */}

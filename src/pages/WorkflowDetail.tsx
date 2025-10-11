@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import { useParams, Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -65,6 +66,7 @@ const WorkflowDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navbar />
       {/* Hero Header */}
       <section className="gradient-hero py-12 border-b border-border/50">
         <div className="container">
