@@ -9,7 +9,6 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme();
 
   const navLinks = [
-    { to: "/", label: "خانه" },
     { to: "/workflows", label: "ورک‌فلوها" },
     { to: "/apis", label: "APIها" },
     { to: "/custom-order", label: "سفارش اختصاصی" },

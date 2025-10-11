@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Play, Eye, ArrowLeft, Code, Key, Sparkles, Workflow } from "lucide-react";
+import { Play, Eye, ArrowLeft, Code, Key, Sparkles, Workflow, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const topWorkflows = [
@@ -60,6 +60,20 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
+      
+      {/* Return to DockerCity */}
+      <div className="container pt-4">
+        <a 
+          href="https://dockercity.ir" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-card hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 group text-sm"
+        >
+          <ArrowLeft className="h-4 w-4 text-muted-foreground group-hover:text-accent transition-smooth group-hover:-translate-x-1" />
+          <span className="text-muted-foreground group-hover:text-foreground transition-smooth">بازگشت به DockerCity</span>
+          <ExternalLink className="h-3 w-3 text-muted-foreground/50" />
+        </a>
+      </div>
       {/* Hero Section */}
       <section className="relative overflow-hidden gradient-hero min-h-[500px] flex items-center">
         <div className="absolute inset-0 overflow-hidden">
