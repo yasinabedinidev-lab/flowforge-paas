@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Workflows from "./pages/Workflows";
 import WorkflowDetail from "./pages/WorkflowDetail";
 import APIs from "./pages/APIs";
+import APIDetail from "./pages/APIDetail";
 import CustomWorkflowOrder from "./pages/CustomWorkflowOrder";
 import FlowHub from "./pages/FlowHub";
 import NotFound from "./pages/NotFound";
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/workflows" element={<Workflows />} />
             <Route path="/workflows/:id" element={<WorkflowDetail />} />
             <Route path="/apis" element={<APIs />} />
+            <Route path="/apis/:id" element={<APIDetail />} />
             <Route path="/custom-order" element={<CustomWorkflowOrder />} />
             <Route path="/flowhub" element={<FlowHub />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

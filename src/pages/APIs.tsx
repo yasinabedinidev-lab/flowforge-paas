@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -197,9 +198,11 @@ const APIs = () => {
                       <Key className="h-4 w-4 ml-2" />
                       دریافت Token
                     </Button>
-                    <Button size="sm" variant="outline" className="hover:border-primary hover:text-primary transition-smooth">
-                      مستندات
-                    </Button>
+                    <Link to={`/apis/${api.id}`}>
+                      <Button size="sm" variant="outline" className="hover:border-primary hover:text-primary transition-smooth">
+                        مستندات
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
