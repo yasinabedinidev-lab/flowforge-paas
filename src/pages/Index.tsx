@@ -61,21 +61,22 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      {/* Return to DockerCity */}
-      <div className="container pt-4">
-        <a 
-          href="https://dockercity.ir" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-card hover:bg-accent/10 hover:border-accent/50 transition-all duration-300 group text-sm"
-        >
-          <ArrowLeft className="h-4 w-4 text-muted-foreground group-hover:text-accent transition-smooth group-hover:-translate-x-1" />
-          <span className="text-muted-foreground group-hover:text-foreground transition-smooth">بازگشت به DockerCity</span>
-          <ExternalLink className="h-3 w-3 text-muted-foreground/50" />
-        </a>
-      </div>
       {/* Hero Section */}
       <section className="relative overflow-hidden gradient-hero min-h-[500px] flex items-center">
+        {/* Return to DockerCity - Top Left */}
+        <div className="absolute top-6 left-6 z-20">
+          <a 
+            href="https://dockercity.ir" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-white/20 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white/30 transition-all duration-300 group text-sm"
+          >
+            <ArrowLeft className="h-4 w-4 text-white/80 group-hover:text-white transition-smooth group-hover:-translate-x-1" />
+            <span className="text-white/80 group-hover:text-white transition-smooth">بازگشت به DockerCity</span>
+            <ExternalLink className="h-3 w-3 text-white/50" />
+          </a>
+        </div>
+
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 right-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-float" />
           <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />

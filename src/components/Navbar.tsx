@@ -43,7 +43,7 @@ const Navbar = () => {
         </div>
 
         {/* Center: Navigation Links */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => (
             <Link key={link.to} to={link.to}>
               <Button
