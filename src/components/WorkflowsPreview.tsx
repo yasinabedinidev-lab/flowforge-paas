@@ -95,15 +95,9 @@ const WorkflowsPreview = () => {
                   ))}
                 </div>
                 <div className="flex gap-2">
-                  <Button 
-                    size="sm" 
-                    className="flex-1 bg-gradient-to-r from-primary to-accent hover:shadow-glow-orange transition-smooth group"
-                  >
-                    <Play className="h-4 w-4 ml-2 group-hover:scale-110 transition-transform" />
-                    اجرا
-                  </Button>
-                  <Button size="sm" variant="outline" className="hover:border-accent hover:text-accent transition-smooth">
-                    <Eye className="h-4 w-4" />
+                  <Button size="sm" variant="outline" className="w-full hover:border-accent hover:text-accent transition-smooth">
+                    <Eye className="h-4 w-4 ml-2" />
+                    مشاهده جزئیات
                   </Button>
                 </div>
               </CardContent>

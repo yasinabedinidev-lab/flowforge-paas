@@ -113,10 +113,6 @@ const WorkflowDetail = () => {
               </div>
 
               <div className="flex gap-3">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-glow-orange">
-                  <Play className="h-5 w-5 ml-2" />
-                  اجرا در Sandbox
-                </Button>
                 <Button size="lg" variant="outline" className="border-white/30 bg-white/10 hover:bg-white/20 text-white">
                   <Download className="h-5 w-5 ml-2" />
                   دانلود JSON
@@ -131,12 +127,20 @@ const WorkflowDetail = () => {
             <div className="w-full md:w-96">
               <Card className="bg-white/10 backdrop-blur-md border-white/20">
                 <CardHeader>
-                  <CardTitle className="text-white">نمای ورک‌فلو</CardTitle>
+                  <CardTitle className="text-white">تصویر ورک‌فلو</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center border border-white/10">
-                    <span className="text-white/60 text-sm">پیش‌نمایش گرافیکی</span>
+                  <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center border border-white/10 overflow-hidden">
+                    {/* You can replace this placeholder with actual workflow image */}
+                    <img 
+                      src="/placeholder.svg" 
+                      alt="Workflow Preview" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
+                  <p className="text-white/60 text-xs mt-2 text-center">
+                    برای افزودن تصویر، فایل را در پوشه public قرار دهید
+                  </p>
                 </CardContent>
               </Card>
             </div>
@@ -169,15 +173,15 @@ const WorkflowDetail = () => {
                   <ol className="space-y-3 text-muted-foreground">
                     <li className="flex gap-3">
                       <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-medium">1</span>
-                      <span>روی دکمه "اجرا در Sandbox" کلیک کنید</span>
+                      <span>فایل JSON ورک‌فلو را دانلود کنید</span>
                     </li>
                     <li className="flex gap-3">
                       <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-medium">2</span>
-                      <span>تنظیمات مورد نیاز را پیکربندی کنید</span>
+                      <span>در پلتفرم n8n خود وارد کنید</span>
                     </li>
                     <li className="flex gap-3">
                       <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-medium">3</span>
-                      <span>ورک‌فلو را تست کرده و فعال کنید</span>
+                      <span>تنظیمات را پیکربندی کرده و فعال کنید</span>
                     </li>
                   </ol>
                 </CardContent>
