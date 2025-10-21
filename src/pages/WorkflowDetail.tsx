@@ -124,7 +124,7 @@ const WorkflowDetail = () => {
             </div>
 
             {/* Workflow Preview */}
-            <div className="w-full md:w-96">
+            <div className="w-full md:w-[600px]">
               <Card className="bg-white/10 backdrop-blur-md border-white/20">
                 <CardHeader>
                   <CardTitle className="text-white">تصویر ورک‌فلو</CardTitle>
